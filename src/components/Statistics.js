@@ -1,33 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import StatisticsEl from './StatisticsEl';
 
 
-const Statistics = ({ title, stats }) => {
-    <section class="statistics">
+const Statistics = ({title, stats}) => {
+    return <section>
         <h2 class="title">{title}</h2>
-
-        <ul class="stat-list">
-        Statistics.map(({stats})=> 
-                <li class="item" key={id}>
-                    <span class="label">{stats.label}</span>
-                    <span class="percentage">{stats.percentage}</span>
-                </li>
-            )}
-            {/* <li class="item">
-                <span class="label">{stats.label}</span>
-                <span class="percentage">{stats.percentage}</span>
-            </li>
-            <li class="item">
-                <span class="label">{stats.label}</span>
-                <span class="percentage">{stats.percentage}</span>
-            </li>
-            <li class="item">
-                <span class="label">{stats.label}</span>
-                <span class="percentage">{stats.percentage}</span>
-            </li> */}
-        </ul>
+            <ul>
+            {stats.map((stat) => (
+                    <StatisticsEl
+                    />
+                ))}
+            </ul>
     </section>
 }
+
 
 // Statistics.propTypes = {
 //     title: PropTypes.string.isRequired,
