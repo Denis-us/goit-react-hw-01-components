@@ -1,27 +1,32 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import StatisticsEl from './StatisticsEl';
+import PropTypes from 'prop-types';
 
 
 const Statistics = ({title, stats}) => {
-    return <section>
-        <h2 class="title">{title}</h2>
-            <ul>
-            {stats.map((stat) => (
-                    <StatisticsEl
-                    />
+    return <section class="statistics">
+            <h2 class="title">{title}</h2>
+
+            <ul class="stat-list">
+                {stats.map((stat) => (
+                    <li class="item" key={stat.id}>
+                        <span class="label">{stat.label}</span>
+                        <span class="percentage">{stat.percentage}</span>
+                    </li>
                 ))}
             </ul>
-    </section>
+        </section>
 }
 
+Statistics.defaultProps = {
+    title: ''
+}
 
-// Statistics.propTypes = {
-//     title: PropTypes.string.isRequired,
-//     avatar: PropTypes.string,
-//     tag: PropTypes.string,
-//     location: PropTypes.string,
-//     stats: PropTypes.string,
-// }
+Statistics.propTypes = {
+    stats: PropTypes.arrayOf(PropTypes.shape({
+        id:PropTypes.string.isRequired,
+        label: PropTypes.string,
+        percentage: PropTypes.number
+    })).isRequired
+}
 
 export default Statistics;

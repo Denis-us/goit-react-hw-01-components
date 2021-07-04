@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import user from '../json-files/user.json';
 
 const Profile = ({ name, avatar, tag, location, stats}) => {
 
