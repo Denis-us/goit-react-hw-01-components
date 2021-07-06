@@ -1,0 +1,47 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+}
+
+.description {
+
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    border-radius: 50%;
+    background-color:wheat;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border: 2px solid black;
+
+}
+
+.label {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    /* font-size: 15px; */
+
+}
+

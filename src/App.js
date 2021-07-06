@@ -1,21 +1,21 @@
 import React from 'react';
-
-import Profile from './components/Profile';
-import Statistics from './components/Statistics';
-import FriendList from './components/FriendList';
-import TransactionHistory from './components/TransactionHistory';
-
+// Компоненты
+import Profile from './components/Profile/Profile';
+import Statistics from './components/Statistics/Statistics';
+import FriendList from './components/FriendList/FriendList';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+// JSON-files
 import user from './json-files/user.json';
 import statisticalData from './json-files/statistical-data.json';
 import friends from './json-files/friends.json';
 import transactions from './json-files/transactions.json';
 // import logo from './logo.svg';
-// import './App.css';
+import './index.css';
 
 const App = () => {
   return (
-    <div>
-      
+    <>
+    
       <Profile
         name={user.name}
         tag={user.tag}
@@ -30,7 +30,7 @@ const App = () => {
 
       <TransactionHistory items={transactions} />
 
-    </div>
+    </>
   );
 }
 
